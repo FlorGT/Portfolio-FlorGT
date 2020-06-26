@@ -26,8 +26,6 @@ function showSlides()
     console.log(slideIndex);
     
     setTimeout(showSlides, speed);
-
-    
   }
   
   document.addEventListener('DOMContentLoaded', showSlides);

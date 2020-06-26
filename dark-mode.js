@@ -6,15 +6,11 @@ function toggleDarkMode(){
 }
 
 function app(){
-
+    
     let DarkModeButton = document.getElementById ('dark-mode');
     DarkModeButton.addEventListener('click', toggleDarkMode);
 
     console.log ('DarkModeButton');
-
-    /*let showSlides = document.getElementsByClassName('-hide');
-    showSlides.addEventListener('click', showSlides); */
 }
-
 
 document.addEventListener('DOMContentLoaded', app);

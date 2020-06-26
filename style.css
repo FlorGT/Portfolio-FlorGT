@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
 
-    min-height: 140vh;
+    min-height: 75vh;
   
     font-family: "Montserrat", sans-serif;
   
@@ -56,9 +56,9 @@ svg{
 
   main {
     display: block;
-    width: 100%;
+    width: 80%;
 
-    Flex-grow: 1;
+    flex-grow: .5;
   }
   
   header {
@@ -138,6 +138,11 @@ svg{
   h4{
     padding: var(--mar-02);
     display: flex;
+
+    font-size: 16pt;
+    font-weight: bold;
+
+    color: var(--c-01);
   }
 
   .portfolio-tittle-projects{
@@ -229,10 +234,15 @@ svg{
     height: auto;
   }
 
-  .social-media {
-    padding: var(--mar-01);
-    margin: var(--mar-02);
+  footer{
+    padding: var(--mar-02);
 
+    max-width: 80%;
+  }
+  
+  .social-media {
+    padding: var(--mar-02);
+    margin: var(--mar-02);
     
     justify-content: space-between;
     align-items: center;
@@ -241,11 +251,11 @@ svg{
   h3.sm-tittle {
     color: var(--c-01);
         
-    font-size: 20pt;
+    font-size: 18pt;
     font-size: bolder;
 
+    display: flex;
     justify-content: center;
-    align-items: center;
   }
   
  
