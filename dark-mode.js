@@ -1,16 +1,45 @@
-console.log ('JS loaded');
-
-function toggleDarkMode(){
-    let body= document.getElementById('app');
-    body.classList.toggle('-dark');
-}
-
-function app(){
+function App()
+{
     
-    let DarkModeButton = document.getElementById ('dark-mode');
-    DarkModeButton.addEventListener('click', toggleDarkMode);
+    let darkMode = localStorage.getItem('darkMode');
 
-    console.log ('DarkModeButton');
+    let darkModeToggle = document.querySelector("#dark-mode");
+
+
+    let enableDarkMode = () =>
+    {
+        let body= document.getElementById('app');
+        body.classList.add('-dark');
+
+        localStorage.setItem('darkMode', "enabled");
+    };
+
+    let disableDarkMode = () =>
+    {
+        let body= document.getElementById('app');
+        body.classList.remove('-dark');
+
+        localStorage.setItem('darkMode', null);
+    };
+
+    if(darkMode === "enabled")
+    {
+        enableDarkMode();
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+
+        darkMode = localStorage.getItem("darkMode");
+        if(darkMode !== 'enabled')
+        {
+            enableDarkMode();
+        }
+        else
+        {
+            disableDarkMode();
+        } 
+    });
 }
 
-document.addEventListener('DOMContentLoaded', app);
+
+document.addEventListener('DOMContentLoaded', App);
